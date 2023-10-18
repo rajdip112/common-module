@@ -2,6 +2,7 @@
   "name": "common_module_web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,17 +11,34 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.13",
+    "@vitejs/plugin-react": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
+    "vite": "^4.5.0",
     "web-vitals": "^2.1.4"
   },
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/common_module_web.umd.js",  // set according your dist folder
+  "module": "./dist/common_module_web.es.js",  // set according your dist folder
+  "exports": {
+    ".": {
+      "import": "./dist/common_module_web.es.js",  // set according your dist folder
+      "require": "./dist/common_module_web.umd.js"  // set according your dist folder
+    }
+  },
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:liferay": "lnbs-build",
+    "deploy:liferay": "npm run build:liferay && lnbs-deploy",
+    "deploy": "npm run build:liferay && lnbs-deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +57,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "liferay-npm-build-support": "^2.31.2",
+    "liferay-npm-bundler": "^2.31.2",
+    "liferay-npm-bundler-preset-create-react-app": "^2.31.2"
+  },
+  "portlet": {
+    "com.liferay.portlet.display-category": "category.common_module-web",
+    "javax.portlet.name": "common_module_web",
+    "javax.portlet.security-role-ref": "power-user,user",
+    "javax.portlet.resource-bundle": "content.Language",
+    "com.liferay.portlet.instanceable": true
   }
 }
