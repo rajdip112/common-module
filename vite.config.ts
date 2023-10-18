@@ -14,7 +14,7 @@
 
         build: {
         lib: {
-            entry: path.resolve(__dirname, "src"),
+            entry: path.resolve(__dirname, "src/lib/index.ts"),
             name,
             formats: ["es", "umd"],
             fileName: (format) => `${name}.${format}.js`,
