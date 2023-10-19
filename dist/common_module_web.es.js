@@ -14,12 +14,12 @@ function ir() {
   if (Re)
     return j;
   Re = 1;
-  var N = Oe, P = Symbol.for("react.element"), V = Symbol.for("react.fragment"), y = Object.prototype.hasOwnProperty, F = N.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, D = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var N = Oe, P = Symbol.for("react.element"), V = Symbol.for("react.fragment"), _ = Object.prototype.hasOwnProperty, F = N.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, D = { key: !0, ref: !0, __self: !0, __source: !0 };
   function S(h, l, R) {
     var d, g = {}, m = null, A = null;
     R !== void 0 && (m = "" + R), l.key !== void 0 && (m = "" + l.key), l.ref !== void 0 && (A = l.ref);
     for (d in l)
-      y.call(l, d) && !D.hasOwnProperty(d) && (g[d] = l[d]);
+      _.call(l, d) && !D.hasOwnProperty(d) && (g[d] = l[d]);
     if (h && h.defaultProps)
       for (d in l = h.defaultProps, l)
         g[d] === void 0 && (g[d] = l[d]);
@@ -40,7 +40,7 @@ var k = {};
 var Te;
 function ur() {
   return Te || (Te = 1, process.env.NODE_ENV !== "production" && function() {
-    var N = Oe, P = Symbol.for("react.element"), V = Symbol.for("react.portal"), y = Symbol.for("react.fragment"), F = Symbol.for("react.strict_mode"), D = Symbol.for("react.profiler"), S = Symbol.for("react.provider"), h = Symbol.for("react.context"), l = Symbol.for("react.forward_ref"), R = Symbol.for("react.suspense"), d = Symbol.for("react.suspense_list"), g = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), X = Symbol.iterator, Ce = "@@iterator";
+    var N = Oe, P = Symbol.for("react.element"), V = Symbol.for("react.portal"), _ = Symbol.for("react.fragment"), F = Symbol.for("react.strict_mode"), D = Symbol.for("react.profiler"), S = Symbol.for("react.provider"), h = Symbol.for("react.context"), l = Symbol.for("react.forward_ref"), R = Symbol.for("react.suspense"), d = Symbol.for("react.suspense_list"), g = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), X = Symbol.iterator, Ce = "@@iterator";
     function Pe(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -68,7 +68,7 @@ function ur() {
     var we = !1, xe = !1, je = !1, ke = !1, Fe = !1, Z;
     Z = Symbol.for("react.module.reference");
     function De(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === y || e === D || Fe || e === F || e === R || e === d || ke || e === A || we || xe || je || typeof e == "object" && e !== null && (e.$$typeof === m || e.$$typeof === g || e.$$typeof === S || e.$$typeof === h || e.$$typeof === l || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === _ || e === D || Fe || e === F || e === R || e === d || ke || e === A || we || xe || je || typeof e == "object" && e !== null && (e.$$typeof === m || e.$$typeof === g || e.$$typeof === S || e.$$typeof === h || e.$$typeof === l || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -92,7 +92,7 @@ function ur() {
       if (typeof e == "string")
         return e;
       switch (e) {
-        case y:
+        case _:
           return "Fragment";
         case V:
           return "Portal";
@@ -129,7 +129,7 @@ function ur() {
         }
       return null;
     }
-    var _ = Object.assign, w = 0, ee, re, te, ne, ae, oe, ie;
+    var y = Object.assign, w = 0, ee, re, te, ne, ae, oe, ie;
     function ue() {
     }
     ue.__reactDisabledLog = !0;
@@ -165,25 +165,25 @@ function ur() {
             writable: !0
           };
           Object.defineProperties(console, {
-            log: _({}, e, {
+            log: y({}, e, {
               value: ee
             }),
-            info: _({}, e, {
+            info: y({}, e, {
               value: re
             }),
-            warn: _({}, e, {
+            warn: y({}, e, {
               value: te
             }),
-            error: _({}, e, {
+            error: y({}, e, {
               value: ne
             }),
-            group: _({}, e, {
+            group: y({}, e, {
               value: ae
             }),
-            groupCollapsed: _({}, e, {
+            groupCollapsed: y({}, e, {
               value: oe
             }),
-            groupEnd: _({}, e, {
+            groupEnd: y({}, e, {
               value: ie
             })
           });
@@ -278,8 +278,8 @@ function ur() {
       } finally {
         B = !1, M.current = u, $e(), Error.prepareStackTrace = i;
       }
-      var C = e ? e.displayName || e.name : "", ye = C ? I(C) : "";
-      return typeof e == "function" && $.set(e, ye), ye;
+      var C = e ? e.displayName || e.name : "", _e = C ? I(C) : "";
+      return typeof e == "function" && $.set(e, _e), _e;
     }
     function Ye(e, r, t) {
       return se(e, !1);
@@ -584,7 +584,7 @@ Check the top-level render call using <` + t + ">.");
         e.ref !== null && (O(e), c("Invalid attribute `ref` supplied to `React.Fragment`."), O(null));
       }
     }
-    function _e(e, r, t, n, i, u) {
+    function ye(e, r, t, n, i, u) {
       {
         var o = De(e);
         if (!o) {
@@ -611,23 +611,23 @@ Check the top-level render call using <` + t + ">.");
             else
               me(p, e);
         }
-        return e === y ? rr(f) : er(f), f;
+        return e === _ ? rr(f) : er(f), f;
       }
     }
     function tr(e, r, t) {
-      return _e(e, r, t, !0);
+      return ye(e, r, t, !0);
     }
     function nr(e, r, t) {
-      return _e(e, r, t, !1);
+      return ye(e, r, t, !1);
     }
     var ar = nr, or = tr;
-    k.Fragment = y, k.jsx = ar, k.jsxs = or;
+    k.Fragment = _, k.jsx = ar, k.jsxs = or;
   }()), k;
 }
 process.env.NODE_ENV === "production" ? K.exports = ir() : K.exports = ur();
 var sr = K.exports;
 function lr() {
-  return /* @__PURE__ */ sr.jsx("div", { children: "Hello" });
+  return /* @__PURE__ */ sr.jsx("div", { children: "Hello, everyone" });
 }
 export {
   lr as FormComponent
